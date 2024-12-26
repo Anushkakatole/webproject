@@ -48,7 +48,9 @@ html, body {
     color: rgb(84, 84, 90);
     margin-left: 25px;
 }
-
+#nav-part2 h5{
+    display: none;
+}
 .gola {
     height: 22px;
     width: 22px;
@@ -98,7 +100,8 @@ html, body {
     justify-content: center;
 }
 .elem h1{
-     font-size: 100px;
+    /* font-size: 100px;*/
+     font-size: 7vw; 
      font-weight: 50;
 }
 #image-content{
@@ -116,4 +119,114 @@ html, body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+@media(max-width:600px){
+    #nav {
+        height: 70px;
+        padding: 0 25px;
+    }
+    #nav-part1{
+        gap: 0px;
+    }
+    
+    #nav-part2 {
+        align-items: center;
+        gap: 30px;
+    }
+    #nav-part2 h4{
+        font-size: 15px;
+        display: none;
+        font-weight: 600;
+    }
+    #nav-part2 h4:nth-child(1){
+        display: initial;
+        margin-right: 25px;
+    }
+    #nav-part2 h4 span{
+        color: rgb(84, 84, 90);
+        margin-left: 10px;
+    }
+    #nav-part2 h5{
+        display: initial;
+    }
+    #nav-part2 i{
+         font-size: 20px;
+         font-weight: 700;
+    }
+    .gola {
+        height: 16px;
+        width: 16px;
+        background-color: black;
+        border-radius: 50%;
+    }
+    #nav2{
+        height: 70px;
+        width: 100%;
+        /*background-color: red;*/
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 25px;
+        gap: 10px;
+    }
+    #nav2 h3{
+        font-size: 2.5vw;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #636363;
+    }
+    #content{
+        height: calc(100% - 140px);
+        width: 100%;
+    
+     /*   background-color: aqua;*/
+    }
+    
+    #text-content{
+        height: 35%;
+        width: 100%;
+       /* background-color: burlywood;*/
+        display: flex;
+        overflow-x: auto;
+    }
+    #text-content::-webkit-scrollbar{
+        background-color: transparent;
+        height: 5px;
+    }
+    #text-content::-webkit-scrollbar-thumb{
+        background-color: orangered;
+    }
+    .elem{
+        height: 100%;
+        width: fit-content;
+        flex-shrink: 0;   
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+    }
+    .elem h1{
+        /* font-size: 100px;*/
+         font-size: 20vw;
+         white-space: nowrap;
+         font-weight: 50;
+    }
+    #image-content{
+        height: 65%;
+        width: 100%;
+        background-color: rebeccapurple;
+        display: flex;
+        overflow-x: auto;
+    }
+    #image-content::-webkit-scrollbar{
+        display: none;
+    }
+    #image-content img{
+        flex-shrink: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: center;
+    }
+
 }
